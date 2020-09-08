@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JQuery Crash Course</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- <script>
+            $(document).ready(function () {
+                $("#btn1").click(function () {
+                    alert("It is important");
+                });
+            });
+        </script> -->
+        <style>
+            body {
+                font-size: 17px;
+                font-family: arial;
+                background: #f4f4f4;
+                line-height: 1.6;
+            }
+            header {
+                background: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                border-bottom: 4px #000 solid;
+                margin-bottom: 10px;
+            }
+
+            #container {
+                width: 90%;
+                margin: auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Jquery Crash Course</h1>
+        </header>
+
+        <div id="container">
+            <h3>Mouse events</h3>
+            <button id="btn1">Button 1</button>
+            <button id="btn2">Button 2</button>
+            <button id="btn3">Button 3</button>
+            <p class="para1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                id porro voluptatum temporibus officiis ipsam alias enim totam
+                illo similique?
+            </p>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                //     $("#btn1").click(function () {
+                //     alert("It is clicked");
+                // });
+                // $("#btn1").on("click", function () {
+                //     alert("It is clicked");
+                // });
+                $("#btn1").on("click", function () {
+                    $(".para1").toggle();
+                });
+                $("#btn2").on("click", function () {
+                    $(".para1").hide();
+                });
+                $("#btn3").on("click", function () {
+                    $(".para1").show();
+                });
+            });
+        </script>
+    </body>
+</html>
