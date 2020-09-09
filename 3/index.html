@@ -50,6 +50,9 @@
                 id porro voluptatum temporibus officiis ipsam alias enim totam
                 illo similique?
             </p>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+            <button>Submit</button>
         </div>
 
         <script>
@@ -60,14 +63,44 @@
                 // $("#btn1").on("click", function () {
                 //     alert("It is clicked");
                 // });
-                $("#btn1").on("click", function () {
-                    $(".para1").toggle();
+                // $("#btn1").on("click", function () {
+                //     $(".para1").toggle();
+                // });
+                // $("#btn2").on("click", function () {
+                //     $(".para1").hide();
+                // });
+                // $("#btn3").on("click", function () {
+                //     $(".para1").show();
+                // });
+                // $("#btn1").dblclick(function () {
+                //     $(".para1").toggle();
+                // });
+                // $("#btn1").hover(function () {
+                //     $(".para1").toggle();
+                // });
+                // $("#btn1").on("mouseenter", function () {
+                //     $(".para1").toggle();
+                // });
+                // $("#btn1").on("mouseleave", function () {
+                //     $(".para1").toggle();
+                // });
+                // $("#btn1").on("mousemove", function () {
+                //     $(".para1").toggle();
+                // });
+                // $("#btn1").on("mousedown", function () {
+                //     $(".para1").toggle();
+                // });
+                // $("#btn1").on("mouseup", function () {
+                //     $(".para1").toggle();
+                // });
+                // $(document).on("mousemove", function (e) {
+                //     console.log("Coord: Y:" + e.clientY + " X:" + e.clientX);
+                // });
+                $("input").focus(function () {
+                    $(this).css("background", "pink");
                 });
-                $("#btn2").on("click", function () {
-                    $(".para1").hide();
-                });
-                $("#btn3").on("click", function () {
-                    $(".para1").show();
+                $("input").blur(function () {
+                    $(this).css("background", "white");
                 });
             });
         </script>
