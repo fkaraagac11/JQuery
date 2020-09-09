@@ -41,6 +41,13 @@
                 border-bottom: 4px #000 solid;
                 margin-bottom: 10px;
             }
+
+            #box2 {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+            }
         </style>
     </head>
     <body>
@@ -72,11 +79,12 @@
         </div>
 
         <hr />
+        <div id="box2"></div>
 
         <script>
             $(document).ready(function () {
                 $("#btnFadeOut").click(function () {
-                    $("#box").fadeOut(5000, function () {
+                    $("#box").fadeOut(1000, function () {
                         $("#btnFadeOut").text("It is gone");
                     });
                 });
@@ -85,6 +93,52 @@
                 });
                 $("#btnFadeTog").click(function () {
                     $("#box").fadeToggle(1000);
+                });
+
+                $("#1").click(function () {
+                    $("#box").slideUp(5000);
+                });
+                $("#2").click(function () {
+                    $("#box").slideDown(5000);
+                });
+                $("#3").click(function () {
+                    $("#box").slideToggle(1000);
+                });
+                $("#4").click(function () {
+                    $("#box").stop();
+                });
+                $("#6").click(function () {
+                    $("#box2").animate({
+                        left: 500,
+                        height: "300px",
+                        width: "300px",
+                        opacity: "0.5",
+                    });
+                });
+                $("#5").click(function () {
+                    $("#box2").animate({
+                        left: 0,
+                        height: "100px",
+                        width: "100px",
+                        opacity: "1",
+                    });
+                });
+                $("#7").click(function () {
+                    var box = $("#box2");
+                    box.animate({
+                        left: 300,
+                    });
+                    box.animate({
+                        top: 300,
+                    });
+                    box.animate({
+                        left: 0,
+                        top: 300,
+                    });
+                    box.animate({
+                        left: 0,
+                        top: 0,
+                    });
                 });
             });
         </script>
