@@ -1,0 +1,22 @@
+The parseInt() function parses a string and returns an integer. Here's an example:
+
+var a = parseInt("007");
+
+The above function converts the string "007" to an integer 7. 
+If the first character in the string can't be converted into a number, then it returns NaN.
+
+Use parseInt() in the convertToInteger function so it converts the input string str into an integer,
+ and returns it.
+
+
+function convertToInteger(str) {
+  return parseInt(str)
+}
+
+convertToInteger("56");
+
+
+24. How can you convert the string of any base to integer in JavaScript?
+The parseInt() function is used to convert numbers between different bases. parseInt() takes the string to be converted as its first parameter, and the second parameter is the base of the given string.
+In order to convert 4F (of base 16) to integer, the code used will be -
+parseInt ("4F", 16);

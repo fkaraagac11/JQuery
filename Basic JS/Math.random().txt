@@ -1,0 +1,33 @@
+Basic JavaScript: Generate Random Fractions with JavaScript
+Random numbers are useful for creating random behavior.
+
+JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and not quite up to 1 (exclusive). Thus Math.random() can return a 0 but never quite return a 1
+
+Note
+Like Storing Values with the Equal Operator, all function calls will be resolved before the return executes, so we can return the value of the Math.random() function.
+
+Change randomFraction to return a random number instead of returning 0.
+
+function randomFraction() {
+
+  // Only change code below this line
+
+  return Math.random();
+
+  // Only change code above this line
+}
+
+Belirli bir aralik icin random number
+//Math.floor(Math.random() * (max - min + 1)) + min
+var x = Math.floor((Math.random() * (100 - 50 + 1)) + 50)
+console.log(x)
+
+
+
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+
+  
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  // Only change code above this line
+}
