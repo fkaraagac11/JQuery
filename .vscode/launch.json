@@ -7,8 +7,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open 11.html",
-            "file": "c:\\Users\\15713\\Documents\\Full-Stack\\JQuery\\11.html"
+            "name": "Open index.html",
+            "file": "c:\\Users\\15713\\Documents\\Full-Stack\\JQuery\\Debug\\index.html"
         }
     ]
 }
