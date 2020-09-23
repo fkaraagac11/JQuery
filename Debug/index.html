@@ -6,6 +6,19 @@
         <title>Document</title>
     </head>
     <body>
-        <script src="script.js"></script>
+        <script src="script.js">
+                        //Function Scope
+
+            const increaseNum = () => {
+                let num =0;
+                let addOne= () => {
+                    num++
+                    return num;
+                }
+                return addOne
+            }
+            const x = increaseNum()
+            console.dir(x)
+        </script>
     </body>
 </html>

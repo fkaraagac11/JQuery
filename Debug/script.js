@@ -1,11 +1,22 @@
-console.log(teddy);
-console.log(sum2());
+const wizard = {
+    name: "Merlin",
+    health: 100,
+    heal: function (num1, num2) {
+        this.health += num1 + num2;
+    },
+};
 
-var teddy = "bear";
+const archer = {
+    name: "Robin Hood",
+    health: 50,
+};
 
-function sum2() {
-    return 1 + 1;
-}
+wizard.heal.call(archer, 50, 60);
+wizard.heal.apply(archer, [20, 30]);
+archer;
+// function borrowing
 
-console.log(sum2());
-console.log(teddy);
+const healArcher = wizard.heal.bind(archer, 50, 60);
+console.log(archer);
+healArcher();
+console.log(archer);
