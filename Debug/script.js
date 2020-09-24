@@ -21,18 +21,41 @@
 // healArcher();
 // console.log(archer);
 
-const array = [1, 2, 3];
+// const array = [1, 2, 3];
 
-function getMaxNumber(array) {
-    if (array[0] > array[1]) {
-        if (array[0] > array[2]) {
-            console.log(array[0] + " is the biggest");
-        }
-    } else if (array[1] > array[2]) {
-        console.log(array[1] + " is the biggest");
-    } else {
-        console.log(array[2] + " is the biggest");
-    }
-}
+// function getMaxNumber(array) {
+//     if (array[0] > array[1]) {
+//         if (array[0] > array[2]) {
+//             console.log(array[0] + " is the biggest");
+//         }
+//     } else if (array[1] > array[2]) {
+//         console.log(array[1] + " is the biggest");
+//     } else {
+//         console.log(array[2] + " is the biggest");
+//     }
+// }
 
-getMaxNumber([33, 4, 7]); // should return 3
+// getMaxNumber([33, 4, 7]);
+
+// const array = [1, 32, 3, 66, 67];
+
+// // in this case, the 'this' keyword doesn't matter!
+// function getMaxNumber(arr) {
+//     return Math.max.apply(null, arr);
+// }
+
+// console.log(getMaxNumber(array));
+
+// const bigInt = 1234567890123456789012345678901234567890n;
+
+// console.log(bigInt);
+
+false == ""; //true
+false == []; //true
+false == {}; //true
+"" == 0; //true
+"" == [];
+"" == {};
+0 == [];
+0 == {};
+0 == null;
