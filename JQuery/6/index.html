@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JQuery Crash Course</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Jquery Crash Course || AJAX</h1>
+        </header>
+
+        <div id="container">
+            <div id="result"></div>
+        </div>
+        <script src="11.js"></script>
+
+        <script>
+            var settings = {
+                async: true,
+                crossDomain: true,
+                url: "https://free-nba.p.rapidapi.com/players/1",
+                method: "GET",
+                headers: {
+                    "x-rapidapi-host": "free-nba.p.rapidapi.com",
+                    "x-rapidapi-key":
+                        "6e33c2151fmsh75117530a10b8cfp179164jsn67c97663675b",
+                },
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+
+                $("#result").append("<h3>" + response.first_name + "</h3>");
+                $("#result").append("<h3>" + response.height_feet + "</h3>");
+                $("#result").append("<h3>" + response.height_inches + "</h3>");
+                $("#result").append("<h3>" + response.last_name + "</h3>");
+                $("#result").append("<h3>" + response.id + "</h3>");
+                $("#result").append("<h3>" + response.position + "</h3>");
+                $("#result").append("<h3>" + response.team.id + "</h3>");
+                $("#result").append("<h3>" + response.team.name + "</h3>");
+                $("#result").append("<h3>" + response.team.city + "</h3>");
+            });
+        </script>
+    </body>
+</html>
