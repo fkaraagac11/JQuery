@@ -23,16 +23,9 @@ console.log(b);
 // Tavsan
 // Tavsan
 
-let arr = [1, 2, 4, 11];
-let newArr = [];
-arr.forEach((num) => {
-    newArr.push(num * 2);
-});
-console.log(newArr);
+function a() {
+    let a = "hello";
+    console.log(a);
+}
 
-const arr = [1, 2, 4, 11];
-const newArr = [];
-arr.forEach((num) => {
-    newArr.push(num * 2);
-});
-console.log(newArr);
+console.log(a);
