@@ -1,0 +1,70 @@
+import java.util.*;
+import java.lang.Math;
+
+public class Main
+{
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);//to readinput
+       int n=sc.nextInt();//number of vertices
+       int visited[]= new int[n];
+       int adj_m[][] = new int[n][n];;//adjacency matrix
+       Queue<Integer> q = new LinkedList<>();
+       int f=-1,r=-1;//queuen front and rear pointers
+      
+       int e =sc.nextInt();//reading number of edges
+      
+       for(int i=0;i<e;i++)
+       {
+       int ff = sc.nextInt();
+       int t =sc.nextInt();
+       adj_m[ff][t]=1;//edge
+       adj_m[t][ff]=1;
+       }
+       double sum=0;
+       for(int j=0;j<n;j++)
+       {
+       if(visited[j]==0)
+       {
+       q.add(j);
+  
+       double c=0;
+      
+       while(!q.isEmpty())
+       {
+       int k = q.remove();
+       if(visited[k]==0)
+{
+visited[k]=1;
+  
+for(int i=0;i<n;i++)
+{
+if(adj_m[k][i]==1)
+{
+q.add(i);
+  
+}
+  
+}
+}
+c++;
+  
+      
+       }
+      
+       sum =sum + Math.ceil(Math.sqrt(c));
+       }
+       }
+       System.out.println((long)sum);
+   }
+}
+
+output:
+
+10
+5
+1 2
+1 3
+2 4
+3 5
+7 8
+8
