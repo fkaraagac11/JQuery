@@ -1,0 +1,30 @@
+//cozum 1A
+function reverseString(str) {
+  let strRev="";
+  for(let i=str.length-1;i>=0; i--){
+
+    strRev= strRev + str.charAt(i)
+  }
+  return strRev;
+}
+
+reverseString("hello");
+
+//cozum 1B
+
+function reverseString(str) {
+  for (var reversedStr = "", i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i];
+  }
+  return reversedStr;
+}
+
+
+
+//cozum 2
+function reverseString(str) {
+  return str
+    .split("")
+    .reverse()
+    .join("");
+}
