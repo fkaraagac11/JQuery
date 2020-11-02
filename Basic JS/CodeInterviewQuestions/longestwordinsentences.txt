@@ -15,4 +15,3 @@ function findLongestWordLength(str) {
 
   return maxLength;
 }
-Code Explanation
