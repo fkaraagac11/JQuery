@@ -23,3 +23,10 @@ function repeatStringNumTimes(str, num) {
     return str + repeatStringNumTimes(str, num - 1);
   }
 }
+
+
+COZUM UC
+
+function repeatStringNumTimes(str, num) {
+  return num > 0 ? str + repeatStringNumTimes(str, num - 1) : '';
+}
